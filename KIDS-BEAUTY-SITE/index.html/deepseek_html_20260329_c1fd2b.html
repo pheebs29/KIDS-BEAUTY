@@ -1,15 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>Kids Beauty By P | Kid's Fashion</title>
     <!-- Link to external CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css/deepseek_css_20260329_ed6310.css">
     <!-- Font Awesome Icons (free) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
+
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        ✨ FREE SHIPPING on orders over $15 &mdash; Use code <strong>KIDSBEAUTY</strong> at checkout ✨
+    </div>
 
     <!-- Header / Navigation -->
     <header>
@@ -17,27 +27,65 @@
             <h1>KIDS BEAUTY <span>BY P</span></h1>
             <p class="tagline">Stylish & Affordable for Ages 5-17</p>
         </div>
-        <div class="cart-icon">
-            <i class="fas fa-shopping-cart"></i>
-            <span id="cart-count">0</span>
-        </div>
-        <div class="mobile-menu-btn">
-            <i class="fas fa-bars"></i>
+        <nav class="nav-links" id="nav-links">
+            <a href="#" class="nav-link">Home</a>
+            <a href="#why-us" class="nav-link">About</a>
+            <a href="#products" class="nav-link">Shop</a>
+            <a href="#newsletter" class="nav-link">Contact</a>
+        </nav>
+        <div class="header-right">
+            <div class="cart-icon" aria-label="Shopping cart">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count">0</span>
+            </div>
+            <div class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </div>
         </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h2>Unique Styles for Young Stars</h2>
-            <p>Clothing • Bags • Accessories — All between $1 - $20</p>
-            <a href="#products" class="btn">Shop Now</a>
+            <span class="hero-badge">✨ Ages 5&ndash;17</span>
+            <h2>Unique Styles for<br>Young Stars</h2>
+            <p>Clothing &bull; Bags &bull; Accessories &mdash; All between $1 &ndash; $20</p>
+            <div class="hero-buttons">
+                <a href="#products" class="btn btn-primary">Shop Now</a>
+                <a href="#why-us" class="btn btn-outline">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Shop With Us -->
+    <section class="why-us" id="why-us">
+        <h2 class="section-title">Why Shop With Us?</h2>
+        <div class="why-grid">
+            <div class="why-card">
+                <div class="why-icon"><i class="fas fa-tag"></i></div>
+                <h3>Affordable Prices</h3>
+                <p>All items $1&ndash;$20, so you can treat your kids without breaking the bank.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-icon"><i class="fas fa-heart"></i></div>
+                <h3>Safe &amp; Quality</h3>
+                <p>Carefully selected materials, safe and comfortable for kids of all ages.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-icon"><i class="fas fa-truck"></i></div>
+                <h3>Fast Delivery</h3>
+                <p>Quick shipping so your little ones get their new looks in no time.</p>
+            </div>
         </div>
     </section>
 
     <!-- Products Section -->
     <section id="products" class="products-section">
         <h2 class="section-title">Our Collection</h2>
+        <div class="search-bar">
+            <i class="fas fa-search"></i>
+            <input type="text" id="product-search" placeholder="Search for styles..." aria-label="Search products">
+        </div>
         <div class="category-filters">
             <button class="filter-btn active" data-category="all">All</button>
             <button class="filter-btn" data-category="clothing">Clothing</button>
@@ -46,6 +94,20 @@
         </div>
         <div class="products-grid" id="products-grid">
             <!-- Products will be injected via JavaScript -->
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter" id="newsletter">
+        <div class="newsletter-content">
+            <div class="newsletter-badge">🎉 Member Exclusive</div>
+            <h2>Get 10% Off Your First Order!</h2>
+            <p>Join our style club and be the first to know about new arrivals and special deals for your little ones.
+            </p>
+            <form class="newsletter-form" id="newsletter-form">
+                <input type="email" id="newsletter-email" placeholder="Enter your email address" required>
+                <button type="submit" class="btn">Subscribe</button>
+            </form>
         </div>
     </section>
 
@@ -84,9 +146,9 @@
             <div class="footer-section">
                 <h4>Follow Us</h4>
                 <div class="social-icons">
-                    <i class="fab fa-instagram"></i>
-                    <i class="fab fa-facebook"></i>
-                    <i class="fab fa-tiktok"></i>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
                 </div>
             </div>
         </div>
@@ -95,11 +157,24 @@
         </div>
     </footer>
 
+    <!-- Cart Overlay -->
+    <div id="cart-overlay" class="cart-overlay"></div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
     <!-- Link to external JavaScript -->
-    <script src="script.js"></script>
+    <script src="../script.js/deepseek_javascript_20260329_8ed983.js"></script>
 </body>
+
 </html>
 <!-- Link to external css -->>
+
 <head>
     <link rel="stylesheet" href="style.css">
-    </head>
+</head>
